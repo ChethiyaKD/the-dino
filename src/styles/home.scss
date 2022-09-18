@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Poppins Medium";
+  src: url(../assets/fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "Poppins Semibold";
+  src: url(../assets/fonts/Poppins-SemiBold.ttf);
+}
+
+.container {
+  img {
+    width: 100px;
+    height: auto;
+  }
+
+  .title {
+    margin-top: 50px;
+    font-family: "Poppins Semibold";
+    font-size: 36px;
+  }
+  .boring-description {
+    margin-top: 100px;
+    font-family: "Poppins Medium";
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+  }
+  .button-wrapper {
+    margin-top: 50px;
+    width: 340px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    margin-top: 20px;
+  }
+  .boring-description {
+    margin-top: 30px !important;
+    line-height: 24px !important;
+  }
+}

@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Home from "./screens/Home";
+import Intro from "./screens/Intro";
+import Game from "./screens/Game";
 
 function App() {
+  const [step, setStep] = useState(1);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {step === 1 && <Home setStep={setStep} />}
+      {step === 2 && <Intro setStep={setStep} />}
+      {step === 3 && <Game setStep={setStep} />}
     </div>
   );
 }
